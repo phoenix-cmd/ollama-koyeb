@@ -1,7 +1,8 @@
-FROM ollama/ollama
+FROM ollama/ollama:latest
 
-# Expose Ollama's default port
+# Expose the Ollama API port
 EXPOSE 11434
 
-# Run Ollama on container start
-CMD ["ollama", "serve"]
+# Run the Ollama server
+ENTRYPOINT ["ollama"]
+CMD ["serve"]
