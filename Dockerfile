@@ -1,9 +1,7 @@
 FROM ollama/ollama
 
-# Pull the small model during build
-RUN ollama pull phi
-
-# Expose Ollama default API port
+# Expose Ollama's default port
 EXPOSE 11434
 
+# Run Ollama on container start
 CMD ["ollama", "serve"]
